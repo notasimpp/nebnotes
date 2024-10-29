@@ -1,1 +1,33 @@
 
+ul{
+    list-style-type: none;
+}
+
+li{
+    float:left;
+    margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #77918a;
+
+}
+a {
+    display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+
+}
+
+a:link{
+    color:aqua;
+}
+a:hover{
+    color:rgb(39, 237, 75);
+    background-color: #121212;
+
+}
+a:active{
+    color:rgb(213, 223, 227);
+}
