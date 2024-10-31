@@ -1,33 +1,149 @@
 
-ul{
-    list-style-type: none;
-}
-
-li{
-    float:left;
-    margin: 0;
+* {
   padding: 0;
-  overflow: hidden;
-  background-color: #77918a;
-
+  margin: 0;
+  background-color: red;
+  box-sizing: border-box;
 }
-a {
-    display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
+
+body {
+  font-family: Geneva, "Verdana", sans-serif ;
+}
+
+nav {
+  background: #0082e6;
+  height: 80px;
+  width: 100%;
+  
+}
+
+label.logo img {
+ width:110px;
+ height:70px;
+ border-radius: 50%;
+ position: fixed;
+ margin: 5px;
+ z-index: 1;
+}
+
+nav ul.sn {
+
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+nav ul.sn li {
+  display: inline-block;
+  justify-content: flex-end;
+  line-height: 80px;
+  margin: 0 5px;
+  
+}
+
+nav ul.sn li a {
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
   text-decoration: none;
-
+}
+.a,.b,.c,.d,.e{
+    display: flex;
+    flex-direction: column;
+  margin-right: 20px;
 }
 
-a:link{
-    color:aqua;
+.d1c,.d2c,.d3c,.d4c,.d5c{
+    display: none;
+    opacity: 0;
+    position: fixed;
+    transition: opacity 0.3s ease;
 }
-a:hover{
-    color:rgb(39, 237, 75);
-    background-color: #121212;
+.contenta:hover .d1c,
+.contentb:hover .d2c,
+.contentc:hover .d3c,
+.contentd:hover .d4c,
+.contente:hover .d5c {
+    opacity: 1;
+    display: block;
+}
+nav ul.sn li a.active{
+  background: #022138;
+  transition: .5s;
+  color: #0082e6;
+}
+nav ul.sn li a:link{
+    color: #36119a;
+    background-color: rgb(139, 199, 201);
+}
+nav ul.sn li a:visited{
+    color: rgb(88, 10, 206);
+    background-color: rgb(39, 226, 26);
+}
+nav ul.sn li a:hover{
+    color: rgb(237, 231, 231);
+    background-color: rgb(67, 65, 63);
+}
+.checkbtn {
+  font-size: 22px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 30px;
+  cursor: pointer;
+  display: none;
+}
 
+#check {
+  display: none;
 }
-a:active{
-    color:rgb(213, 223, 227);
+
+@media (max-width: 1370px) {
+ 
+
+  nav ul li a {
+    font-size: 12px;
+  }
+
+  .checkbtn {
+    display: block;
+  }
+
+  label.logo {
+    font-size: 22px;
+  }
+
+  ul.sn {
+     position: relative; 
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100vh;
+    background: #23405e;
+    float: right;
+    clear: right;
+    text-align: right;
+    transition: all .5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+
+  #check:checked~ul.sn {
+    left: 0;
+  }
 }
