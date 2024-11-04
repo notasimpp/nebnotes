@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneNotes</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleSidebar() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">NebNotes</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Class 11</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Physics</a></li>
+                        <li><a href="#">Chemistry</a></li>
+                        <li><a href="#">Maths</a></li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Nepali</a></li>
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Economics</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Class 12</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Physics</a></li>
+                        <li><a href="#">Chemistry</a></li>
+                        <li><a href="#">Maths</a></li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Nepali</a></li>
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Economics</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Important Resources</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">IOE</a></li>
+                        <li><a href="#">CEE</a></li>
+                        <li><a href="#">Bachelors</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hamburger" onclick="toggleSidebar()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to NebNotes</h1>
+        
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Donate Us</a></li>
+                <li><a href="#">Report a Bug</a></li>
+            </ul>
+            <p>Copyright reserved by NebNotes</p>
+        </div>
+    </footer>
+</body>
+</html>
