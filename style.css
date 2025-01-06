@@ -88,6 +88,9 @@ nav {
     background-color: white;
     margin: 3px 0;
 }
+main{
+    padding-top: 4rem;
+}
 
 @media (max-width: 800px) {
     .nav-links {
@@ -115,17 +118,13 @@ nav {
     }
 }
 
-footer {
-    background-color: #151515;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: auto; 
-}
-
 .footer-content {
-    max-width: 1200px;
+    min-width: 100svw;
+    min-width: 100vw;
     margin: 0 auto;
+    background-color: gray;
+    position:fixed;
+    bottom: 0%;
 }
 
 .footer-links {
@@ -134,10 +133,14 @@ footer {
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
+    background-color: gray;
 }
 
 .footer-links li {
     margin: 0 15px;
+    /* background-color: rgb(85, 74, 74); */
+    border:none;
+    border-radius:0.1rem;
 }
 
 .footer-links li a {
@@ -148,4 +151,11 @@ footer {
 
 .footer-links li a:hover {
     color: #33ffff;
+}
+
+footer p {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
 }
