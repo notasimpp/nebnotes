@@ -123,8 +123,7 @@ main{
     min-width: 100vw;
     margin: 0 auto;
     background-color: gray;
-    position: absolute;
-    bottom: 0%;
+    float:bottom;
 }
 
 .footer-links {
