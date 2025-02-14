@@ -119,10 +119,10 @@ main{
 }
 
 .footer-content {
-    min-width: 100svw;
-    min-width: 100vw;
+    min-width: 50svw;
+    min-width: 50vw;
     margin: 0 auto;
-    background-color: gray;
+    background-color: black;
 }
 
 .footer-links {
@@ -131,7 +131,7 @@ main{
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
-    background-color: gray;
+    background-color: black;
 }
 
 .footer-links li {
