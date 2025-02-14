@@ -119,8 +119,8 @@ main{
 }
 
 .footer-content {
-    min-width: 100svw;
-    min-width: 100vw;
+    max-width: 100svw;
+    max-width: 100vw;
     background-color: black;
     margin-bottom: 0s%;
     margin-top:100%
