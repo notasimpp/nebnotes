@@ -2,28 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Download or view NEB Class 11 and 12 Notes, IOE Prep, CEE materials & more." />
-  <meta name="keywords" content="NEB, Notes, Class 11, Class 12, IOE, CEE, Entrance Preparation" />
-  <meta name="author" content="NebNotes Team" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Download or view NEB Class 11 and 12 Notes, IOE Prep, CEE materials & more.">
+  <meta name="keywords" content="NEB, Notes, Class 11, Class 12, IOE, CEE, Entrance Preparation">
+  <meta name="author" content="NebNotes Team">
   <meta property="og:title" content="NebNotes – Study Smarter" />
   <meta property="og:description" content="Reliable NEB notes, entrance materials and more for students." />
   <meta property="og:image" content="https://yourdomain.com/preview.jpg" />
   <meta property="og:url" content="https://yourdomain.com" />
   <title>NebNotes</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <script>
+    function toggleSidebar() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('show');
+    }
+
+   
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropdowns = document.querySelectorAll('.dropdown');
+
+      dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        const menu = dropdown.querySelector('.dropdown-content');
+
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          document.querySelectorAll('.dropdown-content').forEach(d => {
+            if (d !== menu) d.style.display = 'none';
+          });
+          
+          menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dropdown')) {
+          document.querySelectorAll('.dropdown-content').forEach(menu => {
+            menu.style.display = 'none';
+          });
+        }
+      });
+    });
+  </script>
 </head>
 <body>
   <header>
-    <nav class="navbar" aria-label="Main Navigation">
+    <nav class="navbar">
       <div class="logo">NebNotes</div>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Home</a></li>
 
-        <!-- Dropdown -->
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Class 11</a>
+          <a href="#">Class 11</a>
           <ul class="dropdown-content">
             <li><a href="#">Physics</a></li>
             <li><a href="#">Chemistry</a></li>
@@ -36,7 +68,7 @@
         </li>
 
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Class 12</a>
+          <a href="#">Class 12</a>
           <ul class="dropdown-content">
             <li><a href="#">Physics</a></li>
             <li><a href="#">Chemistry</a></li>
@@ -49,28 +81,28 @@
         </li>
 
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Test</a>
+          <a href="#">Test</a>
           <ul class="dropdown-content">
             <li><a href="tte.html">MCQs</a></li>
           </ul>
         </li>
 
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Resources</a>
+          <a href="#">Important Resources</a>
           <ul class="dropdown-content">
             <li><a href="#">IOE</a></li>
             <li><a href="#">CEE</a></li>
             <li><a href="#">Bachelors</a></li>
-            <li><a href="#">NEB Solutions</a></li>
+            <li><a href="#">Important Neb Solutions</a></li>
           </ul>
         </li>
       </ul>
 
-      <button class="hamburger" onclick="toggleSidebar()" aria-label="Toggle Menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
+      <div class="hamburger" onclick="toggleSidebar()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
     </nav>
   </header>
 
@@ -78,15 +110,11 @@
     <section class="grid-container">
       <div class="text-content">
         <h1>Welcome to NebNotes</h1>
-        <p>Your trusted place for reliable study materials, notes, and exam prep for NEB Classes 11 and 12. <span aria-hidden="true">📚</span></p>
-        <p>Study smart, not hard. We make your NEB journey smoother with curated notes and mock tests.</p>
+        <p>Your trusted place for reliable study materials, notes, and exam prep for NEB Classes 11 and 12. 📚</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nesciunt tempore provident incidunt rerum...</p>
       </div>
       <div class="image-area">
-        <img src="https://th.bing.com/th/id/OIP.AHXPYfm7Sl3L-jXvMg71hQHaE8?rs=1&pid=ImgDetMain" 
-             alt="Students preparing with notes" 
-             loading="lazy" 
-             width="500" 
-             height="300" />
+        <img src="https://th.bing.com/th/id/OIP.AHXPYfm7Sl3L-jXvMg71hQHaE8?rs=1&pid=ImgDetMain" alt="Educational Visual" />
       </div>
     </section>
   </main>
@@ -98,37 +126,8 @@
         <li><a href="donate.html">Donate</a></li>
         <li><a href="#">Report a Bug</a></li>
       </ul>
-      <p>&copy; <time datetime="2025">2025</time> NebNotes. All rights reserved.</p>
+      <p>&copy; NebNotes 2025. All rights reserved.</p>
     </div>
   </footer>
-
-  <script>
-    function toggleSidebar() {
-      document.querySelector('.nav-links').classList.toggle('show');
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggles = document.querySelectorAll('.dropdown-toggle');
-
-      toggles.forEach(toggle => {
-        const parent = toggle.closest('.dropdown');
-        const menu = parent.querySelector('.dropdown-content');
-
-        toggle.addEventListener('click', (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          document.querySelectorAll('.dropdown-content').forEach(m => {
-            if (m !== menu) m.style.display = 'none';
-          });
-          menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-        });
-      });
-
-      document.addEventListener('click', () => {
-        document.querySelectorAll('.dropdown-content').forEach(menu => menu.style.display = 'none');
-      });
-    });
-  </script>
 </body>
 </html>
-
